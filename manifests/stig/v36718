@@ -1,0 +1,33 @@
+# This class manages:
+# v36718
+# 
+# Description
+# Basic authentication uses plain text passwords that could be used to compromise a system.
+# 
+# Check Text ( C-46884r1_chk )
+# If the following registry value does not exist or is not configured as specified, this is a finding:
+# 
+# Registry Hive: HKEY_LOCAL_MACHINE
+# Registry Path: \Software\Policies\Microsoft\Windows\WinRM\Service\
+# 
+# Value Name: AllowBasic
+# 
+# Type: REG_DWORD
+# Value: 0
+# Fix Text (F-44830r1_fix)
+# Configure the policy value for Computer Configuration -> Administrative Templates -> Windows
+# Components -> Windows Remote Management (WinRM) -> WinRM Service -> "Allow Basic authentication" 
+# to "Disabled".
+# 
+#
+class secure_windows::stig::v36718 (
+  Boolean $enforced = false,
+) {
+  if $enforced {
+    registry::value { 'v36718':
+      key    => 'HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WinRM\Service',
+      value  => 'AllowBasic',
+      type   => 'REG_DWORD',
+      data   => '0',
+    }
+  }
