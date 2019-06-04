@@ -8,9 +8,15 @@ class secure_windows (
 
   # Platform-specific defaults
   case $facts['operatingsystemmajrelease'] {
+  
+    '10': {
+      fail("Windows 10 ${facts['operatingsystemmajrelease']} not yet supported.")
+      # class { '::secure_windows::stig::v36718': }
+    }
 
     '2012','2012 R2': {
       fail("Windows Server ${facts['operatingsystemmajrelease']} not yet supported.")
+      # class { '::secure_windows::stig::v36718': }
     }
 
     '2016','2016 R2': {
