@@ -8,6 +8,9 @@ secure_windows::classification: 'unclassified'
 
 secure_windows::stig::v73289::is_ftp_server: false
 
+secure_windows::stig::v3472::ntp_server: time.nist.gov
+
+
 # secure_windows::stig::v73647::legalnoticetext: "You are accessing a U.S. Government (USG) Information System (IS) that is provider for USG-authorized use only.
 #   By using this IS (which includes any device attached to this IS), you consent to the following conditions:
 #   -The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.
@@ -15,6 +18,34 @@ secure_windows::stig::v73289::is_ftp_server: false
 #   -Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose.
 #   -This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy.
 #   -Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details."
+
+secure_windows::stig::v1152::enforced: true
+secure_windows::stig::v1157::enforced: true
+
+secure_windows::stig::v15667::enforced: true
+secure_windows::stig::v15672::enforced: true
+secure_windows::stig::v15674::enforced: true
+secure_windows::stig::v15682::enforced: true
+secure_windows::stig::v15683::enforced: true
+secure_windows::stig::v15684::enforced: true
+secure_windows::stig::v15685::enforced: true
+secure_windows::stig::v15686::enforced: true
+secure_windows::stig::v15687::enforced: true
+secure_windows::stig::v15696::enforced: true
+secure_windows::stig::v15697::enforced: true
+secure_windows::stig::v15698::enforced: true
+secure_windows::stig::v15699::enforced: true
+secure_windows::stig::v15700::enforced: true
+secure_windows::stig::v15701::enforced: true
+secure_windows::stig::v15702::enforced: true
+secure_windows::stig::v15703::enforced: true
+secure_windows::stig::v15704::enforced: true
+secure_windows::stig::v15705::enforced: true
+secure_windows::stig::v15706::enforced: true
+secure_windows::stig::v15707::enforced: true
+secure_windows::stig::v15713::enforced: true
+secure_windows::stig::v15718::enforced: true
+secure_windows::stig::v15722::enforced: true
 
 secure_windows::stig::v73223::enforced: true
 secure_windows::stig::v73225::enforced: true
